@@ -371,8 +371,8 @@ const projectData = {
       'Created interactive Plotly analytical dashboards and automated PDF exports formatted for edge deployment on shop-floor terminals and embedded touchscreen systems.',
       'Optimized cycle times, smoothed workstation idle times, and established standardized digital work sequences.'
     ],
-    liveUrl: 'https://devpost.com',
-    codeUrl: 'https://gitlab.com'
+    liveUrl: 'https://anurag-dashore.github.io/MechAI/',
+    liveLabel: 'Live Demo ↗'
   },
   prismpulse: {
     title: 'PrismPulse — GitLab Duo Chat Agent',
@@ -388,8 +388,10 @@ const projectData = {
       'Leveraged Model Context Protocol (MCP) to supply high-fidelity repository context directly to GitLab Duo Chat.',
       'Equipped engineering teams with instant code health audits directly within the GitLab workflow.'
     ],
-    liveUrl: 'https://devpost.com',
-    codeUrl: 'https://gitlab.com'
+    liveUrl: 'https://devpost.com/software/prismpulse',
+    liveLabel: 'Devpost ↗',
+    codeUrl: 'https://gitlab.com/explore/ai-catalog/agents/1011676/',
+    codeLabel: 'GitLab AI Catalog ↗'
   },
   igniteengine: {
     title: 'IgniteEngine — 16 Sparks',
@@ -404,8 +406,8 @@ const projectData = {
       'Integrated high-throughput Groq API inference for ultra-fast, sub-second Slack conversational responses.',
       'Utilized Model Context Protocol (MCP) concepts for modular agent tool execution.'
     ],
-    liveUrl: 'https://devpost.com',
-    codeUrl: 'https://gitlab.com'
+    codeUrl: 'https://gitlab.com/anuragdashore1024/IgniteEngine',
+    codeLabel: 'GitLab Repo ↗'
   },
   assemblyline: {
     title: 'Assembly Line Efficiency & Material Handling Optimization',
@@ -421,8 +423,8 @@ const projectData = {
       'Designed a pull-based Kanban system, Daily Production Reports (DPRs), and standardized Shop Production Schedules to eliminate overproduction.',
       'Balanced assembly sequences for Motor, Fan, Cooling Pad, and Pump components, establishing Standard Operating Procedures (SOPs).'
     ],
-    liveUrl: '#about',
-    codeUrl: '#experience'
+    liveUrl: 'https://github.com/ANURAG-DASHORE/ANURAG-DASHORE.github.io/tree/main/IMAGES/FINAL_YEAR_PROJECT',
+    liveLabel: 'Project Files ↗'
   },
   gitlabmr: {
     title: 'GitLab Open-Source Merge Request #248992',
@@ -439,7 +441,9 @@ const projectData = {
       'Demonstrated deep understanding of enterprise-scale frontend architecture and rigorous test discipline.'
     ],
     liveUrl: 'https://gitlab.com/gitlab-org/gitlab/-/merge_requests/248992',
-    codeUrl: 'https://gitlab.com/gitlab-org/gitlab'
+    liveLabel: 'View Merge Request ↗',
+    codeUrl: 'https://gitlab.com/gitlab-org/gitlab',
+    codeLabel: 'GitLab Repository ↗'
   },
   safetyhelmet: {
     title: 'Optimized Safety Helmet Design',
@@ -452,9 +456,7 @@ const projectData = {
       'Designed conceptual helmet model conforming strictly to IS 4151 regulatory crash impact standards.',
       'Integrated IoT-based traffic signal detection module for enhanced rider situational awareness.',
       'Collaborated on structural material durability and user ergonomics for real-world commuter adoption.'
-    ],
-    liveUrl: '#experience',
-    codeUrl: '#about'
+    ]
   }
 };
 
@@ -489,8 +491,19 @@ function initProjectModals() {
 
     const liveBtn = document.getElementById('modal-live-link');
     const codeBtn = document.getElementById('modal-code-link');
-    if (liveBtn) liveBtn.href = data.liveUrl;
-    if (codeBtn) codeBtn.href = data.codeUrl;
+    const setLink = (el, url, label, fallback) => {
+      if (!el) return;
+      if (url) {
+        el.href = url;
+        el.style.display = '';
+        const sp = el.querySelector('span');
+        if (sp) sp.textContent = label || fallback;
+      } else {
+        el.style.display = 'none';
+      }
+    };
+    setLink(liveBtn, data.liveUrl, data.liveLabel, 'Project Link ↗');
+    setLink(codeBtn, data.codeUrl, data.codeLabel, 'Repository / GitLab ↗');
 
     modalBackdrop.classList.add('open');
     document.body.style.overflow = 'hidden';
