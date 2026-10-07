@@ -2,7 +2,7 @@
 
 A modern, responsive, high-performance personal portfolio website built for **Anurag Dashore**, customized strictly to reflect his actual resume, engineering projects, hackathons, and open-source contributions.
 
-![Anurag Dashore](assets/images/anuragdashore.webp)
+![Anurag Dashore](assets/images/avtar.webp)
 
 ---
 
