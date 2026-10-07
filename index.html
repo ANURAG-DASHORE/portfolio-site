@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anurag Dashore — AI & Software Developer | Open-Source Contributor</title>
+  <meta name="description" content="Portfolio of Anurag Dashore, Final-year B.E. student at IET DAVV Indore building LLM agents, offline-first AI tools and data dashboards in Python. Open-source contributor to GitLab (#248992).">
+  <meta name="keywords" content="Anurag Dashore, AI Engineer, LLM Agents, Python, GitLab Contributor, MechAI, Offline AI, Flask, IET DAVV, scikit-learn, Portfolio">
+  <meta name="author" content="Anurag Dashore">
+  
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Anurag Dashore — AI & Software Developer | Open-Source Contributor">
+  <meta property="og:description" content="Building LLM agents, offline-first AI tools, and industrial data dashboards in Python. Merged contributor to GitLab open-source codebase.">
+  <meta property="og:image" content="assets/images/avatar.webp">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='25' fill='%236366f1'/><text x='50%' y='55%' dominant-baseline='middle' text-anchor='middle' font-size='50' font-family='sans-serif' font-weight='900' fill='white'>AD</text></svg>">
+
+  <!-- Google Fonts Preconnect & Stylesheet -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Outfit:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Main Design System CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Interactive Ambient Canvas Background -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- Ambient Glow Blobs -->
+  <div class="ambient-glow glow-top-right"></div>
+  <div class="ambient-glow glow-middle-left"></div>
+  <div class="ambient-glow glow-bottom-right"></div>
+
+  <!-- ========================================================================
+       Navigation Bar
+       ======================================================================== -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <!-- Logo -->
+      <a href="#hero" class="logo" aria-label="Anurag Dashore Home">
+        <span class="logo-badge">AD</span>
+        <span>Anurag <span class="gradient-text">Dashore</span></span>
+      </a>
+
+      <!-- Navigation Links -->
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#opensource" class="nav-link">Open Source</a></li>
+        <li><a href="#education" class="nav-link">Education</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <!-- Action Items & Theme Switcher -->
+      <div class="nav-actions">
+        <button id="theme-toggle-btn" class="theme-toggle-btn" aria-label="Toggle Dark/Light Mode">
+          <span id="theme-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+          </span>
+        </button>
+
+        <a href="assets/docs/Anurag_Dashore.pdf" download="Anurag_Dashore.pdf" class="btn btn-primary btn-sm" id="nav-resume-btn" title="Download Official Resume PDF">
+          <span>Resume (PDF)</span>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+        </a>
+
+        <!-- Mobile Nav Toggle -->
+        <button class="mobile-nav-toggle" id="mobile-nav-toggle" aria-label="Toggle navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       Hero Section
+       ======================================================================== -->
+  <section class="section hero-section" id="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <!-- Hero Text & Value Proposition -->
+        <div class="hero-content">
+          <div class="status-pill">
+            <span class="status-dot"></span>
+            <span>Final-Year B.E. (IET DAVV) · Open to AI & Software Roles</span>
+          </div>
+
+          <h1 class="hero-title">
+            Hi, I'm <span class="gradient-text">Anurag Dashore</span><br>
+            <span class="typewriter-wrapper">
+              <span id="typewriter-text">LLM Agents Engineer</span>
+              <span class="typewriter-cursor">|</span>
+            </span>
+          </h1>
+
+          <p class="hero-subtitle">
+            Building LLM agents, offline-first AI tools and data dashboards in Python. Merged contributor to GitLab's open-source codebase (#248992). Passionate about applying practical AI engineering to real-world industrial and software challenges.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">
+              <span>Explore Projects</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+
+            <a href="#opensource" class="btn btn-secondary">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#fc6d26"><path d="M22.65 14.39L12 22.13 1.35 14.39a.84.84 0 0 1-.3-.94l1.22-3.78 2.44-7.51A.42.42 0 0 1 4.82 2a.43.43 0 0 1 .58 0 .42.42 0 0 1 .11.18l2.44 7.49h8.1l2.44-7.49a.42.42 0 0 1 .11-.18.43.43 0 0 1 .58 0 .42.42 0 0 1 .11.16l2.44 7.51 1.22 3.78a.84.84 0 0 1-.3.94z"/></svg>
+              <span>GitLab Open-Source MR</span>
+            </a>
+
+            <!-- Professional Profile Quick Strip -->
+            <div class="hero-social-links">
+              <!-- LinkedIn -->
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="LinkedIn Profile" title="LinkedIn">
+                <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+              </a>
+              <!-- GitHub -->
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="GitHub Profile" title="GitHub">
+                <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              </a>
+              <!-- GitLab -->
+              <a href="https://gitlab.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="GitLab Profile" title="GitLab">
+                <svg width="19" height="19" viewBox="0 0 24 24" fill="#fc6d26"><path d="M22.65 14.39L12 22.13 1.35 14.39a.84.84 0 0 1-.3-.94l1.22-3.78 2.44-7.51A.42.42 0 0 1 4.82 2a.43.43 0 0 1 .58 0 .42.42 0 0 1 .11.18l2.44 7.49h8.1l2.44-7.49a.42.42 0 0 1 .11-.18.43.43 0 0 1 .58 0 .42.42 0 0 1 .11.16l2.44 7.51 1.22 3.78a.84.84 0 0 1-.3.94z"/></svg>
+              </a>
+              <!-- Devpost -->
+              <a href="https://devpost.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Devpost Profile" title="Devpost Hackathons">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="#003e54"><path d="M6.002 1.61L0 12.004 6.002 22.39h11.996L24 12.004 17.998 1.61H6.002zm1.593 4.084h3.947c2.932 0 4.673 1.637 4.673 4.296 0 2.673-1.741 4.31-4.673 4.31H7.595V5.694zm2.146 6.842h1.613c1.677 0 2.659-.88 2.659-2.546 0-1.652-.982-2.532-2.659-2.532h-1.613v5.078z"/></svg>
+              </a>
+              <!-- YouTube -->
+              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="YouTube Channel" title="YouTube">
+                <svg width="19" height="19" viewBox="0 0 24 24" fill="#ff0000"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+              </a>
+              <!-- Email -->
+              <a href="mailto:anuragdashore1024+connect_with_me@gmail.com" class="social-icon-btn" aria-label="Direct Email" title="Email Anurag">
+                <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Hero Metrics Bar (Matching Real Resume Achievements) -->
+          <div class="hero-stats-row">
+            <div class="stat-item">
+              <span class="stat-number" data-target="17">17</span>
+              <span class="stat-label">Workstations Analyzed (MechAI)</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number" data-target="16">16</span>
+              <span class="stat-label">LLM Agents Orchestrated</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number" data-target="1">1</span>
+              <span class="stat-label">Merged GitLab Open-Source MR (#248992)</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number" data-target="4">4</span>
+              <span class="stat-label">ML Prediction Models Deployed</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Visual: Portrait & Interactive Badges -->
+        <div class="hero-visual">
+          <div class="visual-card-wrapper">
+            <div class="avatar-frame">
+              <img src="assets/images/avatar.webp" alt="Anurag Dashore - AI & Software Developer" class="avatar-image">
+            </div>
+
+            <!-- Floating Tech Badges -->
+            <div class="floating-badge badge-top-left">
+              <svg viewBox="0 0 24 24" fill="#3776ab"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm2 15h-4v-2h4v2zm2-4H8v-2h8v2zm0-4H8V7h8v2z"/></svg>
+              <span>Python & Flask</span>
+            </div>
+
+            <div class="floating-badge badge-mid-left">
+              <svg viewBox="0 0 24 24" fill="#6366f1"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm1 14h-2v-4h2zm0-6h-2V8h2z"/></svg>
+              <span>LLM Agents & MCP</span>
+            </div>
+
+            <div class="floating-badge badge-bottom-right">
+              <svg viewBox="0 0 24 24" fill="#10b981"><path d="M12 2L2 7l10 5 10-5-10-5zm0 9l-10-5v6l10 5 10-5v-6l-10 5zm0 7l-10-5v6l10 5 10-5v-6l-10 5z"/></svg>
+              <span>SmolLM2 & Edge AI</span>
+            </div>
+
+            <!-- Live Status Terminal Card -->
+            <div class="terminal-chip">
+              <span class="terminal-chip-dot"></span>
+              <span>SmolLM2-360M: Loaded (Offline) | Workstations: 17</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       Biography & About Me Section
+       ======================================================================== -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-header reveal-on-scroll">
+        <span class="section-badge">// 01. BIOGRAPHY & OBJECTIVE</span>
+        <h2 class="section-title">Bridging Industrial Engineering with Practical AI</h2>
+        <p class="section-description">
+          Applying computer science, machine learning models, and local LLMs to solve physical manufacturing constraints and software quality bottlenecks.
+        </p>
+      </div>
+
+      <div class="about-grid">
+        <!-- Story & Philosophy -->
+        <div class="about-narrative reveal-on-scroll">
+          <p class="lead-text">
+            I am a final-year B.E. student at <strong>IET DAVV, Indore</strong> (Institute of Engineering & Technology, Devi Ahilya Vishwavidyalaya) graduating in early 2027.
+          </p>
+
+          <p class="body-paragraph">
+            My engineering work uniquely fuses <strong>industrial systems principles</strong> (Lean Manufacturing, Kanban, JIT, time & motion study, line balancing) with <strong>cutting-edge AI engineering</strong> (Model Context Protocol, agent orchestration, RAG, local small language models like SmolLM2, and scikit-learn).
+          </p>
+
+          <p class="body-paragraph">
+            I am also a merged open-source contributor to <strong>GitLab</strong>, having identified and fixed a tricky Apollo GraphQL mock race condition in their Vue.js enterprise test suites. Whether deploying edge AI models that operate completely offline on factory shop-floors, or building multi-agent Slack automation with Groq and LLaMA, I focus on practical, dependable engineering.
+          </p>
+
+          <div class="about-features-grid">
+            <div class="feature-box">
+              <div class="feature-icon-wrapper">🤖</div>
+              <h3 class="feature-title">LLM Agents & MCP</h3>
+              <p class="feature-desc">Building autonomous multi-agent pipelines with sequential context passing, Model Context Protocol, and Groq.</p>
+            </div>
+
+            <div class="feature-box">
+              <div class="feature-icon-wrapper">⚡</div>
+              <h3 class="feature-title">Offline-First Edge AI</h3>
+              <p class="feature-desc">Deploying lightweight models like SmolLM2-360M for factory terminals without internet or cloud API dependencies.</p>
+            </div>
+
+            <div class="feature-box">
+              <div class="feature-icon-wrapper">🏭</div>
+              <h3 class="feature-title">Lean & Line Balancing</h3>
+              <p class="feature-desc">Time study, cycle time optimization, U-shaped layout redesign, and pull-based Kanban flow systems.</p>
+            </div>
+
+            <div class="feature-box">
+              <div class="feature-icon-wrapper">🦊</div>
+              <h3 class="feature-title">Open-Source Contributor</h3>
+              <p class="feature-desc">Merged contributor to GitLab (MR #248992) resolving complex Vue.js/Apollo GraphQL flaky tests.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bio Snapshot Card -->
+        <div class="bio-sidebar-card reveal-on-scroll">
+          <div class="bio-card-header">
+            <h3 class="bio-title">Anurag Dashore</h3>
+            <span class="bio-subtitle">&lt;AI & Software Developer /&gt;</span>
+          </div>
+
+          <ul class="bio-info-list">
+            <li class="bio-info-item">
+              <span class="bio-info-label">University:</span>
+              <span class="bio-info-value">IET DAVV, Indore</span>
+            </li>
+            <li class="bio-info-item">
+              <span class="bio-info-label">Degree:</span>
+              <span class="bio-info-value">B.E. Mechanical Engineering</span>
+            </li>
+            <li class="bio-info-item">
+              <span class="bio-info-label">Expected Graduation:</span>
+              <span class="bio-info-value">Feb 2027</span>
+            </li>
+            <li class="bio-info-item">
+              <span class="bio-info-label">High School (CBSE):</span>
+              <span class="bio-info-value">Prestige Public School (83%)</span>
+            </li>
+            <li class="bio-info-item">
+              <span class="bio-info-label">Location:</span>
+              <span class="bio-info-value">Indore, MP, India</span>
+            </li>
+            <li class="bio-info-item">
+              <span class="bio-info-label">Status:</span>
+              <span class="bio-info-value" style="color: var(--accent-success);">🟢 Open to Opportunities</span>
+            </li>
+          </ul>
+
+          <div class="bio-card-footer">
+            <a href="assets/docs/Anurag_Dashore.pdf" download="Anurag_Dashore.pdf" class="btn btn-primary" style="width: 100%;">
+              <span>Download Official Resume (PDF)</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+            </a>
+            <a href="mailto:anuragdashore1024+connect_with_me@gmail.com?subject=%5BPortfolio%5D%20Want%20to%20connect&amp;body=Hi%20Anurag%2C%0D%0A%0D%0AI%20came%20across%20your%20portfolio%20and%20would%20like%20to%20connect.%0D%0A%0D%0A%28Role%20%2F%20topic%3A%20%29%0D%0A%0D%0ARegards%2C%0D%0A" class="btn btn-secondary" style="width: 100%;">
+              <span>Send Mail</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       Open Source Milestone Spotlight (GitLab Core Contribution)
+       ======================================================================== -->
+  <section class="section" id="opensource" style="padding-top: 2rem;">
+    <div class="container">
+      <div class="section-header reveal-on-scroll">
+        <span class="section-badge">// 02. OPEN-SOURCE MILESTONE</span>
+        <h2 class="section-title">Open-Source Contributor — GitLab</h2>
+        <p class="section-description">
+          Investigating and resolving subtle enterprise-scale race conditions in global open-source software.
+        </p>
+      </div>
+
+      <div class="os-spotlight-card reveal-on-scroll">
+        <div class="os-header-row">
+          <div class="os-brand-badge">
+            <span class="os-brand-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M22.65 14.39L12 22.13 1.35 14.39a.84.84 0 0 1-.3-.94l1.22-3.78 2.44-7.51A.42.42 0 0 1 4.82 2a.43.43 0 0 1 .58 0 .42.42 0 0 1 .11.18l2.44 7.49h8.1l2.44-7.49a.42.42 0 0 1 .11-.18.43.43 0 0 1 .58 0 .42.42 0 0 1 .11.16l2.44 7.51 1.22 3.78a.84.84 0 0 1-.3.94z"/></svg>
+            </span>
+            <span>GitLab (gitlab.com/gitlab-org/gitlab) — Merge Request #248992</span>
+          </div>
+
+          <span class="badge-merged-glow">✓ MERGED INTO MASTER (Aug 2026)</span>
+        </div>
+
+        <p class="body-paragraph" style="margin-bottom: 1rem;">
+          Resolved a critical flaky Jest test in GitLab's Enterprise Edition (EE) frontend (Vue.js). Identified a subtle asynchronous race condition in Apollo GraphQL mock resolution and refactored the spec to adopt GitLab's official <code>createControlledMockApollo</code> pattern, aligning with core maintainer guidelines. Reviewed and approved by two GitLab staff maintainers.
+        </p>
+
+        <div class="os-code-snippet">
+          <div class="code-comment">// spec/frontend/ee/vue_shared/components/..._spec.js (Apollo Mock Refactor)</div>
+          <div class="code-diff-del">- const mockApollo = createMockApollo([[query, jest.fn().mockResolvedValue(response)]]);</div>
+          <div class="code-diff-add">+ // Use createControlledMockApollo to eliminate flaky mock resolution race condition:</div>
+          <div class="code-diff-add">+ const requestHandlers = { queryHandler: jest.fn().mockResolvedValue(response) };</div>
+          <div class="code-diff-add">+ const mockApollo = createControlledMockApollo([requestHandlers.queryHandler]);</div>
+          <div class="code-diff-add">+ await waitForPromises(); // Deterministic state guaranteed</div>
+        </div>
+
+        <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+          <a href="https://gitlab.com/gitlab-org/gitlab/-/merge_requests/248992" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+            <span>View GitLab Merge Request ↗</span>
+          </a>
+          <button class="btn btn-secondary btn-sm open-project-modal" data-project="gitlabmr">
+            <span>Read Case Study</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       Skills & Tech Stack Section
+       ======================================================================== -->
+  <section class="section" id="skills">
+    <div class="container">
+      <div class="section-header reveal-on-scroll">
+        <span class="section-badge">// 03. TECHNICAL SKILLS</span>
+        <h2 class="section-title">Technologies, Frameworks & Domain Competencies</h2>
+        <p class="section-description">
+          Derived directly from production implementations, competitive hackathons, and engineering coursework.
+        </p>
+      </div>
+
+      <!-- Skills Category Filter -->
+      <div class="skills-controls reveal-on-scroll">
+        <button class="filter-btn skill-filter-btn active" data-filter="all">All Skills</button>
+        <button class="filter-btn skill-filter-btn" data-filter="languages">Languages</button>
+        <button class="filter-btn skill-filter-btn" data-filter="aiml">AI / ML & LLMs</button>
+        <button class="filter-btn skill-filter-btn" data-filter="tools">Tools & Frameworks</button>
+        <button class="filter-btn skill-filter-btn" data-filter="data">Data & BI</button>
+        <button class="filter-btn skill-filter-btn" data-filter="lean">Lean & Manufacturing</button>
+      </div>
+
+      <!-- Skills Grid -->
+      <div class="skills-grid reveal-on-scroll">
+        <!-- Python -->
+        <div class="skill-card" data-category="languages">
+          <div class="skill-card-top">
+            <div class="skill-icon-box">
+              <svg viewBox="0 0 24 24" fill="#3776ab"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm2 15h-4v-2h4v2zm2-4H8v-2h8v2zm0-4H8V7h8v2z"/></svg>
+            </div>
+            <span class="skill-level-badge">Primary Core</span>
+          </div>
+          <h3 class="skill-name">Python (Advanced)</h3>
+          <p class="skill-category">Languages</p>
+          <div class="skill-progress-bar">
+            <div class="skill-progress-fill" style="width: 95%;"></div>
+          </div>
+        </div>
+
+        <!-- C / C++ -->
+        <div class="skill-card" data-category="languages">
+          <div class="skill-card-top">
+            <div class="skill-icon-box">
+              <svg viewBox="0 0 24 24" fill="#00599c"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 14h-2v-6h2v6zm0-8h-2V6h2v2z"/></svg>
+            </div>
+            <span class="skill-level-badge">Coursework Core</span>
+          </div>
+          <h3 class="skill-name">C / C++ & DSA</h3>
+          <p class="skill-category">Languages & Foundations</p>
+          <div class="skill-progress-bar">
+            <div class="skill-progress-fill" style="width: 85%;"></div>
+          </div>
+        </div>
+
+        <!-- SQL -->
+        <div class="skill-card" data-category="languages">
+          <div class="skill-card-top">
+            <div class="skill-icon-box">
+              <svg viewBox="0 0 24 24" fill="#336791"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 14h-2v-4h2v4zm0-6h-2V8h2v2z"/></svg>
+            </div>
+            <span class="skill-level-badge">Proficient</span>
+          </div>
+          <h3 class="skill-name">SQL & Relational DBs</h3>
+          <p class="skill-category">Languages & Data</p>
+          <div class="skill-progress-bar">
+            <div class="skill-progress-fill" style="width: 88%;"></div>
+          </div>
+        </div>
+
+        <!-- MCP (Model Context Protocol) -->
+        <div class="skill-card" data-category="aiml">
+          <div class="skill-card-top">
+            <div class="skill-icon-box">
+              <svg viewBox="0 0 24 24" fill="#6366f1"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            </div>
+            <span class="skill-level-badge">Hackathon Winner</span>
+          </div>
+          <h3 class="skill-name">MCP & LLM Agents</h3>
+          <p class="skill-category">AI / ML & Agent Systems</p>
+          <div class="skill-progress-bar">
+            <div class="skill-progress-fill" style="width: 94%;"></div>
+          </div>
+        </div>
+
+        <!-- SmolLM2 & Edge AI -->
+        <div class="skill-card" data-category="aiml">
+          <div class="skill-card-top">
+            <div class="skill-icon-box">
+              <svg viewBox="0 0 24 24" fill="#10b981"><polygon points="12 2 2 7 12 12 22 7 12 2"/></svg>
+            </div>
+            <span class="skill-level-badge">Offline-First</span>
+          </div>
+          <h3 class="skill-name">SmolLM2 & Local LLMs</h3>
+          <p class="skill-category">AI / ML & Edge Models</p>
+          <div class="skill-progress-bar">
+            <div class="skill-progress-fill" style="width: 92%;"></div>
+          </div>
+        </div>
+
+        <!-- Groq, Gemini & LLaMA 4 Scout -->
+        <div class="skill-card" data-category="aiml">
+          <div class="skill-card-top">
+            <div class="skill-icon-box">
+              <svg viewBox="0 0 24 24" fill="#f59e0b"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+            </div>
+            <span class="skill-level-badge">High-Speed Inference</span>
+          </div>
+          <h3 class="skill-name">Groq API & Gemini API</h3>
+          <p class="skill-category">AI / ML APIs & RAG</p>
+          <div class="skill-progress-bar">
+            <div class="skill-progress-fill" style="width: 90%;"></div>
+          </div>
+        </div>
+
+        <!-- scikit-learn & OpenCV -->
+        <div class="skill-card" data-category="aiml">
+          <div class="skill-card-top">
+            <div class="skill-icon-box">
+              <svg viewBox="0 0 24 24" fill="#06b6d4"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm1 14h-2v-4h2zm0-6h-2V8h2z"/></svg>
+            </div>
+            <span class="skill-level-badge">4 Deployed Models</span>
+          </div>
+          <h3 class="skill-name">scikit-learn & OpenCV</h3>
+          <p class="skill-category">Machine Learning & Vision</p>
+          <div class="skill-progress-bar">
+            <div class="skill-progress-fill" style="width: 88%;"></div>
+          </div>
+        </div>
+
+        <!-- Flask -->
+        <div class="skill-card" data-category="tools">
+          <div class="skill-card-top">
+            <div class="skill-icon-box">
+              <svg viewBox="0 0 24 24" fill="#f8fafc"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+            </div>
+            <span class="skill-level-badge">Backend Framework</span>
+          </div>
+          <h3 class="skill-name">Flask (Python)</h3>
+          <p class="skill-category">Tools & Frameworks</p>
+          <div class="skill-progress-bar">
+            <div class="skill-progress-fill" style="width: 90%;"></div>
+          </div>
+        </div>
+
+        <!-- Slack Bolt & API -->
+        <div class="skill-card" data-category="tools">
+          <div class="skill-card-top">
+            <div class="skill-icon-box">
+              <svg viewBox="0 0 24 24" fill="#e01e5a"><path d="M5.042 15.165a2.528 2.528 0 0 1-2.52 2.523A2.528 2.528 0 0 1 0 15.165a2.527 2.527 0 0 1 2.522-2.52h2.52v2.52zM6.313 15.165a2.527 2.527 0 0 1 2.521-2.52 2.527 2.527 0 0 1 2.521 2.52v6.313A2.528 2.528 0 0 1 8.834 24a2.528 2.528 0 0 1-2.521-2.522v-6.313z"/></svg>
+            </div>
+            <span class="skill-level-badge">Slack Challenge</span>
+          </div>
+          <h3 class="skill-name">Slack Bolt & Block Kit</h3>
+          <p class="skill-category">Tools & Bot Frameworks</p>
+          <div class="skill-progress-bar">
+            <div class="skill-progress-fill" style="width: 92%;"></div>
+          </div>
+        </div>
+
+        <!-- Pandas, Plotly & Power BI -->
+        <div class="skill-card" data-category="data">
+          <div class="skill-card-top">
+            <div class="skill-icon-box">
+              <svg viewBox="0 0 24 24" fill="#150458"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline></svg>
+            </div>
+            <span class="skill-level-badge">Analytics & BI</span>
+          </div>
+          <h3 class="skill-name">Pandas, Plotly & Power BI</h3>
+          <p class="skill-category">Data & BI</p>
+          <div class="skill-progress-bar">
+            <div class="skill-progress-fill" style="width: 92%;"></div>
+          </div>
+        </div>
+
+        <!-- Git, Linux & Windows -->
+        <div class="skill-card" data-category="tools">
+          <div class="skill-card-top">
+            <div class="skill-icon-box">
+              <svg viewBox="0 0 24 24" fill="#f05032"><circle cx="12" cy="12" r="10"/></svg>
+            </div>
+            <span class="skill-level-badge">GitLab Contributor</span>
+          </div>
+          <h3 class="skill-name">Git & Linux (Debian/GNOME)</h3>
+          <p class="skill-category">Dev Environments</p>
+          <div class="skill-progress-bar">
+            <div class="skill-progress-fill" style="width: 94%;"></div>
+          </div>
+        </div>
+
+        <!-- Lean Manufacturing & Kanban -->
+        <div class="skill-card" data-category="lean">
+          <div class="skill-card-top">
+            <div class="skill-icon-box">
+              <svg viewBox="0 0 24 24" fill="#10b981"><rect x="3" y="3" width="18" height="18" rx="2"/></svg>
+            </div>
+            <span class="skill-level-badge">Industry Project</span>
+          </div>
+          <h3 class="skill-name">Lean, Kanban & JIT</h3>
+          <p class="skill-category">Industrial Systems Engineering</p>
+          <div class="skill-progress-bar">
+            <div class="skill-progress-fill" style="width: 91%;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       Projects Showcase Section
+       ======================================================================== -->
+  <section class="section" id="projects">
+    <div class="container">
+      <div class="section-header reveal-on-scroll">
+        <span class="section-badge">// 04. PROJECTS & HACKATHONS</span>
+        <h2 class="section-title">Real-World Projects & AI Challenges</h2>
+        <p class="section-description">
+          Practical applications built for competitions, enterprise hackathons, and industrial line balancing.
+        </p>
+      </div>
+
+      <!-- Project Category Controls -->
+      <div class="projects-controls reveal-on-scroll">
+        <button class="filter-btn project-filter-btn active" data-filter="all">All Projects</button>
+        <button class="filter-btn project-filter-btn" data-filter="ai">Industrial AI & ML</button>
+        <button class="filter-btn project-filter-btn" data-filter="agents">LLM Agents</button>
+        <button class="filter-btn project-filter-btn" data-filter="lean">Lean Engineering</button>
+      </div>
+
+      <!-- Projects Grid -->
+      <div class="projects-grid">
+        <!-- Project 1: MechAI -->
+        <article class="project-card reveal-on-scroll" data-category="ai">
+          <div class="project-image-box">
+            <img src="assets/images/mechai.webp" alt="MechAI Smart Manufacturing Industrial Dashboard" class="project-image" loading="lazy">
+            <span class="project-tag-floating">InnoVent-27 (Jul 2026)</span>
+          </div>
+
+          <div class="project-content">
+            <div class="project-meta-row">
+              <span class="project-category-label">Industrial AI Platform · Offline-First</span>
+            </div>
+
+            <h3 class="project-title">MechAI — Assembly Line Efficiency</h3>
+            <p class="project-desc">
+              Flask-based industrial AI platform analyzing real manufacturing data across 17 workstations. Integrates 4 scikit-learn ML models across 12 modules and an offline edge chatbot powered by SmolLM2-360M without cloud API dependencies.
+            </p>
+
+            <div class="project-metrics-row">
+              <span class="metric-pill">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline></svg>
+                <span>17 Workstations</span>
+              </span>
+              <span class="metric-pill">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                <span>Offline SmolLM2 Chatbot</span>
+              </span>
+            </div>
+
+            <div class="project-stack-tags">
+              <span class="stack-tag">Python</span>
+              <span class="stack-tag">Flask</span>
+              <span class="stack-tag">scikit-learn</span>
+              <span class="stack-tag">Pandas</span>
+              <span class="stack-tag">Plotly</span>
+              <span class="stack-tag">SmolLM2-360M</span>
+            </div>
+
+            <div class="project-actions">
+              <button class="btn btn-primary btn-sm open-project-modal" data-project="mechai">
+                <span>View Full Details</span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+              </button>
+              <a href="https://devpost.com" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm" aria-label="Devpost Project Link">
+                <span>Devpost ↗</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 2: PrismPulse -->
+        <article class="project-card reveal-on-scroll" data-category="agents">
+          <div class="project-image-box">
+            <img src="assets/images/gitlab.webp" alt="PrismPulse GitLab Duo Chat Agent" class="project-image fit-contain" loading="lazy">
+            <span class="project-tag-floating">GitLab Transcend Hackathon</span>
+          </div>
+
+          <div class="project-content">
+            <div class="project-meta-row">
+              <span class="project-category-label">GitLab Duo Chat Agent · Jun 2026</span>
+            </div>
+
+            <h3 class="project-title">PrismPulse — Codebase Quality Agent</h3>
+            <p class="project-desc">
+              GitLab Duo Chat agent analyzing codebases across 7 dimensions: Health Score, Inactive Code, Security, Dependencies, Duplication, Structure, and Test Gaps. Indexed in the official GitLab AI-Agent CatLog (Agent ID: 1011676).
+            </p>
+
+            <div class="project-metrics-row">
+              <span class="metric-pill">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                <span>7 Inspection Dimensions</span>
+              </span>
+              <span class="metric-pill">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path></svg>
+                <span>Agent ID: 1011676</span>
+              </span>
+            </div>
+
+            <div class="project-stack-tags">
+              <span class="stack-tag">Python</span>
+              <span class="stack-tag">GitLab Duo Chat</span>
+              <span class="stack-tag">MCP</span>
+              <span class="stack-tag">Code Analysis</span>
+            </div>
+
+            <div class="project-actions">
+              <button class="btn btn-primary btn-sm open-project-modal" data-project="prismpulse">
+                <span>View Full Details</span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+              </button>
+              <a href="https://devpost.com" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+                <span>Devpost ↗</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 3: IgniteEngine -->
+        <article class="project-card reveal-on-scroll" data-category="agents">
+          <div class="project-image-box">
+            <img src="assets/images/ignite-engine.webp" alt="IgniteEngine 16 Sparks Multi-Agent System" class="project-image" loading="lazy">
+            <span class="project-tag-floating">Slack Agent Challenge (Aug 2026)</span>
+          </div>
+
+          <div class="project-content">
+            <div class="project-meta-row">
+              <span class="project-category-label">Multi-Agent System · Groq & Slack</span>
+            </div>
+
+            <h3 class="project-title">IgniteEngine — 16 Sparks</h3>
+            <p class="project-desc">
+              Slack-native system orchestrating 16 specialized LLM agents for automated story and animation design with sequential context passing. Features interactive branching, agent rerolling, and post-generation safety validation.
+            </p>
+
+            <div class="project-metrics-row">
+              <span class="metric-pill">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+                <span>16 LLM Agents</span>
+              </span>
+              <span class="metric-pill">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                <span>Safety Validated</span>
+              </span>
+            </div>
+
+            <div class="project-stack-tags">
+              <span class="stack-tag">Python</span>
+              <span class="stack-tag">Slack Bolt/API</span>
+              <span class="stack-tag">Groq API</span>
+              <span class="stack-tag">Slack Block Kit</span>
+              <span class="stack-tag">MCP</span>
+            </div>
+
+            <div class="project-actions">
+              <button class="btn btn-primary btn-sm open-project-modal" data-project="igniteengine">
+                <span>View Full Details</span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+              </button>
+              <a href="https://devpost.com" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+                <span>Devpost ↗</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 4: Final Year Project (Anand Air Cooler) -->
+        <article class="project-card reveal-on-scroll" data-category="lean">
+          <div class="project-image-box">
+            <img src="assets/images/final-year-project.webp" alt="Assembly Line Efficiency & Material Handling" class="project-image fit-top" loading="lazy">
+            <span class="project-tag-floating">Final Year Project (2025-2026)</span>
+          </div>
+
+          <div class="project-content">
+            <div class="project-meta-row">
+              <span class="project-category-label">Mentored by Dr. Devendra Singh Verma · Anand Air Cooler</span>
+            </div>
+
+            <h3 class="project-title">Assembly Line Efficiency & Material Handling</h3>
+            <p class="project-desc">
+              Conducted AS-IS time study establishing Standard Time of 33.26 min/unit and uncovering 24% cycle time loss due to material transport. Proposed U-shaped layout, designed Kanban system, and introduced Daily Production Reports.
+            </p>
+
+            <div class="project-metrics-row">
+              <span class="metric-pill">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                <span>33.26 min Standard Time</span>
+              </span>
+              <span class="metric-pill">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon></svg>
+                <span>24% Transit Loss Fixed</span>
+              </span>
+            </div>
+
+            <div class="project-stack-tags">
+              <span class="stack-tag">Lean Manufacturing</span>
+              <span class="stack-tag">Kanban</span>
+              <span class="stack-tag">JIT</span>
+              <span class="stack-tag">Time Study</span>
+              <span class="stack-tag">PLM</span>
+            </div>
+
+            <div class="project-actions">
+              <button class="btn btn-primary btn-sm open-project-modal" data-project="assemblyline">
+                <span>View Full Details</span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+              </button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       Education & Hackathons Section
+       ======================================================================== -->
+  <section class="section" id="education">
+    <div class="container">
+      <div class="section-header reveal-on-scroll">
+        <span class="section-badge">// 05. ACADEMICS & CERTIFICATIONS</span>
+        <h2 class="section-title">Education & Recognized Credentials</h2>
+        <p class="section-description">
+          Formal engineering foundations, university coursework, and external workshops.
+        </p>
+      </div>
+
+      <div class="timeline">
+        <!-- Education 1: IET DAVV -->
+        <div class="timeline-item reveal-on-scroll">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <div>
+                <h3 class="timeline-role">B.E. in Mechanical Engineering</h3>
+                <div class="timeline-company">IET DAVV, Indore — Institute of Engineering & Technology, Devi Ahilya Vishwavidyalaya</div>
+              </div>
+              <span class="timeline-period">Expected Feb 2027</span>
+            </div>
+            <p class="timeline-desc">
+              Focusing on computer science integration with physical systems, mechatronics, and production optimization.
+            </p>
+            <ul class="timeline-achievements">
+              <li><strong>Key Courses:</strong> Basics of Programming with C/C++, OOP with Java, Data Structures & Algorithms (DSA), Mechatronics.</li>
+              <li>Final Year Capstone in Assembly Line Balancing & Industrial Material Flow at Anand Air Cooler.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Education 2: Prestige Public School -->
+        <div class="timeline-item reveal-on-scroll">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <div>
+                <h3 class="timeline-role">Senior Secondary (CBSE)</h3>
+                <div class="timeline-company">Prestige Public School, Indore</div>
+              </div>
+              <span class="timeline-period">2019 — 2021</span>
+            </div>
+            <ul class="timeline-achievements">
+              <li><strong>Class XII (PCM + Informatics Practices):</strong> 83% (2021)</li>
+              <li><strong>Class X (Standard Mathematics):</strong> 73.2% (2019)</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Certifications & Workshops Item -->
+        <div class="timeline-item reveal-on-scroll">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <div>
+                <h3 class="timeline-role">Workshops, Hackathons & Professional Certifications</h3>
+                <div class="timeline-company">IIT Indore, Tata Forage & HubSpot Academy</div>
+              </div>
+              <span class="timeline-period">2022 — 2026</span>
+            </div>
+            <ul class="timeline-achievements">
+              <li><strong>AI Workshop:</strong> Fluxus, Indian Institute of Technology (IIT Indore) · Nov 2022</li>
+              <li><strong>Data Visualisation: Empowering Business with Effective Insights:</strong> Forage · Tata · Jul 2026</li>
+              <li><strong>AEO Fundamentals:</strong> HubSpot Academy · Aug 2026</li>
+              <li><strong>BIS On-Campus Hackathon:</strong> Optimized Safety Helmet Design per IS 4151 with IoT traffic detection (Nov–Dec 2024, 60–80 teams).</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       Contact Section
+       ======================================================================== -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section-header reveal-on-scroll">
+        <span class="section-badge">// 06. CONTACT & PROFILES</span>
+        <h2 class="section-title">Let's Connect & Collaborate</h2>
+        <p class="section-description">
+          Open to full-time AI engineering roles, software development opportunities, and impactful research collaborations.
+        </p>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Direct Contact Channels -->
+        <div class="contact-info-col reveal-on-scroll">
+          <div class="contact-highlight-card">
+            <h3 class="contact-highlight-title">Direct Inquiries</h3>
+            <p class="contact-highlight-text">
+              I am based in Indore, India and actively interviewing for AI engineering, full-stack, and software development positions. You can reach out directly via email or explore my public code repositories and hackathon builds.
+            </p>
+
+            <div class="contact-cards-list">
+              <!-- Email Card with Copy Trigger -->
+              <div class="contact-channel-card">
+                <div class="channel-left">
+                  <div class="channel-icon">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                  </div>
+                  <div class="channel-info">
+                    <h5>Official Email</h5>
+                    <p>Want to connect? Send me a mail</p>
+                  </div>
+                </div>
+                <div class="channel-actions">
+                  <a class="copy-btn" href="mailto:anuragdashore1024+connect_with_me@gmail.com?subject=%5BPortfolio%5D%20Want%20to%20connect" aria-label="Send a mail">Send mail</a>
+                </div>
+              </div>
+
+              <!-- LinkedIn -->
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="contact-channel-card">
+                <div class="channel-left">
+                  <div class="channel-icon">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                  </div>
+                  <div class="channel-info">
+                    <h5>LinkedIn</h5>
+                    <p>Connect with Anurag</p>
+                  </div>
+                </div>
+                <span class="copy-btn">Open ↗</span>
+              </a>
+
+              <!-- GitLab -->
+              <a href="https://gitlab.com" target="_blank" rel="noopener noreferrer" class="contact-channel-card">
+                <div class="channel-left">
+                  <div class="channel-icon">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="#fc6d26"><path d="M22.65 14.39L12 22.13 1.35 14.39a.84.84 0 0 1-.3-.94l1.22-3.78 2.44-7.51A.42.42 0 0 1 4.82 2a.43.43 0 0 1 .58 0 .42.42 0 0 1 .11.18l2.44 7.49h8.1l2.44-7.49a.42.42 0 0 1 .11-.18.43.43 0 0 1 .58 0 .42.42 0 0 1 .11.16l2.44 7.51 1.22 3.78a.84.84 0 0 1-.3.94z"/></svg>
+                  </div>
+                  <div class="channel-info">
+                    <h5>GitLab Profile</h5>
+                    <p>Open Source & MRs</p>
+                  </div>
+                </div>
+                <span class="copy-btn">Explore ↗</span>
+              </a>
+
+              <!-- GitHub & Devpost -->
+              <div class="contact-channel-card">
+                <div class="channel-left">
+                  <div class="channel-icon">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                  </div>
+                  <div class="channel-info">
+                    <h5>Location & Timezone</h5>
+                    <p>Indore, Madhya Pradesh, India (IST)</p>
+                  </div>
+                </div>
+                <span class="copy-btn" style="border-color: var(--accent-success); color: var(--accent-success);">Active</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form-card reveal-on-scroll">
+          <h3 class="connect-title">Connect with me</h3>
+          <p class="connect-message">
+            Want to connect? Have a role for me, or want to discuss something? Please click the mail button below.
+          </p>
+          <a href="mailto:anuragdashore1024+connect_with_me@gmail.com?subject=%5BPortfolio%5D%20Want%20to%20connect&amp;body=Hi%20Anurag%2C%0D%0A%0D%0AI%20came%20across%20your%20portfolio%20and%20would%20like%20to%20connect.%0D%0A%0D%0A%28Role%20%2F%20topic%3A%20%29%0D%0A%0D%0ARegards%2C%0D%0A" class="btn btn-primary connect-mail-btn" id="connect-mail-btn">
+            <span>Send Mail</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+          </a>
+          <p class="connect-alt">No mail app opens? <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=anuragdashore1024%2Bconnect_with_me%40gmail.com&amp;su=%5BPortfolio%5D%20Want%20to%20connect&amp;body=Hi%20Anurag%2C%0D%0A%0D%0AI%20came%20across%20your%20portfolio%20and%20would%20like%20to%20connect.%0D%0A%0D%0A%28Role%20%2F%20topic%3A%20%29%0D%0A%0D%0ARegards%2C%0D%0A" target="_blank" rel="noopener">Open in Gmail</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       Project Deep-Dive Modal Popup
+       ======================================================================== -->
+  <div class="modal-backdrop" id="project-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-dialog">
+      <button class="modal-close-btn" id="modal-close-btn" aria-label="Close details">✕</button>
+      
+      <div class="modal-image-box">
+        <img id="modal-img" src="" alt="Project Visual Preview">
+      </div>
+
+      <div class="modal-body">
+        <div class="modal-badges-row" id="modal-badges"></div>
+        <h3 class="modal-title" id="modal-title">Project Title</h3>
+        <p class="modal-category-label" id="modal-subtitle" style="color: var(--accent-secondary); font-family: var(--font-mono); margin-bottom: 1.25rem;"></p>
+        
+        <p class="modal-description" id="modal-desc"></p>
+
+        <h4 class="modal-section-title">Technical Architecture & Highlights:</h4>
+        <ul class="timeline-achievements" id="modal-highlights" style="margin-bottom: 2rem;"></ul>
+
+        <div class="modal-actions-footer">
+          <a id="modal-live-link" href="#" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+            <span>Project Link ↗</span>
+          </a>
+          <a id="modal-code-link" href="#" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+            <span>Repository / GitLab ↗</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <!-- ========================================================================
+       Footer
+       ======================================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#hero" class="logo">
+            <span class="logo-badge">AD</span>
+            <span>Anurag <span class="gradient-text">Dashore</span></span>
+          </a>
+          <p>
+            Anurag Dashore · Final-year B.E. student at IET DAVV Indore · AI & Software Developer · Open-Source Contributor (GitLab).
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="#about" class="footer-link">About Me</a></li>
+            <li><a href="#skills" class="footer-link">Technical Skills</a></li>
+            <li><a href="#projects" class="footer-link">Projects & Hackathons</a></li>
+            <li><a href="#opensource" class="footer-link">GitLab Contribution</a></li>
+            <li><a href="#education" class="footer-link">Education</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Profiles & Social</h4>
+          <ul class="footer-links">
+            <li><a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="footer-link">LinkedIn ↗</a></li>
+            <li><a href="https://github.com" target="_blank" rel="noopener noreferrer" class="footer-link">GitHub ↗</a></li>
+            <li><a href="https://gitlab.com" target="_blank" rel="noopener noreferrer" class="footer-link">GitLab ↗</a></li>
+            <li><a href="https://devpost.com" target="_blank" rel="noopener noreferrer" class="footer-link">Devpost ↗</a></li>
+            <li><a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="footer-link">YouTube ↗</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Resume & Docs</h4>
+          <ul class="footer-links">
+            <li><a href="assets/docs/Anurag_Dashore.pdf" download="Anurag_Dashore.pdf" class="footer-link">Download PDF Resume 📥</a></li>
+            <li><a href="mailto:anuragdashore1024+connect_with_me@gmail.com" class="footer-link">Want to connect? Send a mail</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          © 2026 Anurag Dashore · Designed & Engineered with precision.
+        </div>
+
+        <div class="footer-live-status">
+          <span class="status-dot"></span>
+          <span>Local Time: <span id="live-time">Loading...</span></span>
+        </div>
+
+        <button id="back-to-top" class="back-to-top-btn" aria-label="Back to top" style="opacity: 0; pointer-events: none;">
+          ↑
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Main JavaScript File -->
+  <script src="js/main.js"></script>
+</body>
+</html>
